@@ -72,6 +72,17 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Add your CSS styles here if needed */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .skills-column {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+        }
 /* Basic */
 
 	@-ms-viewport {
