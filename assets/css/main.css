@@ -32,6 +32,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/* Hide the "Read More" buttons initially */
+.read-more-button {
+    display: none;
+}
 
 ol, ul {
 	list-style: none;
