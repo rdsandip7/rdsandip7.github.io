@@ -70,7 +70,18 @@
 										I am on a relentless quest to unravel the stories hidden within data. My passion lies in translating complex information into actionable insights, and my journey is characterized by continuous learning and growth.<br/> 
 										Through this platform, I invite you to delve into my world of data exploration and discovery. Join me as I transform raw data into valuable narratives that drive informed decisions..</p>
 								</header>
-								<a href="#" class="image fit"><img src="images/Sandip Dhakal.jpg" alt="" /></a>
+								<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/Sandip Dhakal.jpg" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Sandip Dhakal.jpg" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 								<div class="skills-container">
 								    <!-- Key Skills Section -->
 								    <div class="skills-column">
@@ -123,7 +134,18 @@
 										<h2><a href="#">Supply Chain Analysis<br />
 										</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/supplychain.png" alt="" /></a>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/supplychain.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/supplychain.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 									<p><h3> Supply Chain Analysis Project</br></h3>
 										 I'm excited to share with you a recent project that I've completed – a supply chain analysis project that explores key insights into the world of logistics and product management. This project delves into various aspects of supply chain management, including revenue analysis, product type sales, transportation cost analysis, defect rate examination, and more. I'm thrilled to provide you with a glimpse of this project's key highlights.
 										</br>
@@ -166,7 +188,18 @@
 									<header>										
 										<h2><a href="#">Air Quality Data Analysis</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/airquality.png" alt="" /></a>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/airquality.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/airquality.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 									<h2>Air Quality Data Analysis</h2>    
     									<p>I'm excited to share one of my recent data analysis projects: the Air Quality Data Analysis. In this project, I delved into a dataset related to air quality, with the goal of understanding the factors that influence air quality and their impact on the environment.</p>
 									<h3>Project Overview</h3>
@@ -219,7 +252,18 @@
 										<h2><a href="#">Pizza Sales Analysis<br />
 										</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/Salesdashboard.png" alt="" /></a>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/Salesdashboard.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 										<h2>Pizza Sales Analysis Using Power BI</h2>
 										    <p>As a data analyst, I love diving into data and extracting valuable insights. In my recent project, I used the powerful tool Power BI to analyze pizza sales data. This project allowed me to showcase my data analysis skills and create impactful visualizations.</p>
 										    
@@ -315,6 +359,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+		    // Function to open the image modal
+		    function openModal() {
+		        document.getElementById('imageModal').style.display = 'flex';
+		    }
+		
+		    // Function to close the image modal
+		    function closeModal() {
+		        document.getElementById('imageModal').style.display = 'none';
+		    }
+		</script>
+
 
 	</body>
 </html>
