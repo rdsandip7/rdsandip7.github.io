@@ -105,6 +105,7 @@
 								            <li>Strong communication skills, both verbal and written, making it easy to convey complex ideas to diverse audiences.</li>
 								            <li>Uphold high work ethics and integrity, maintaining professional standards in all endeavors.</li>
 								        </ul>
+									<button class="read-more-button" onclick="toggleSkills('generalSkillsList')">Read More</button>
 								    </div>
 								
 								    <!-- Technical Skills Section -->
@@ -120,6 +121,7 @@
 								            <li>Familiar with machine learning algorithms, such as decision trees, neural networks, and random forests, for predictive modeling.</li>
 								            <li>Knowledge of big data technologies like Hadoop and Spark for managing and analyzing large-scale data.</li>
 								        </ul>
+									<button class="read-more-button" onclick="toggleSkills('generalSkillsList')">Read More</button>           
 								    </div>
 								</div>
 								
@@ -368,6 +370,19 @@
 		    // Function to close the image modal
 		    function closeModal() {
 		        document.getElementById('imageModal').style.display = 'none';
+		    }
+			 // Function to toggle the visibility of skills
+		    function toggleSkills(listId) {
+		        var skillsList = document.getElementById(listId);
+		        var readMoreButton = document.querySelector('#' + listId + ' + .read-more-button');
+		
+		        if (skillsList.style.maxHeight) {
+		            skillsList.style.maxHeight = null;
+		            readMoreButton.innerHTML = 'Read More';
+		        } else {
+		            skillsList.style.maxHeight = skillsList.scrollHeight + 'px';
+		            readMoreButton.innerHTML = 'Read Less';
+		        }
 		    }
 		</script>
 
