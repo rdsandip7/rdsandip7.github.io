@@ -41,22 +41,17 @@ ol, ul {
 	list-style: none;
 }
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+       /* Add this style to create a flex container */
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        #main {
-            display: flex;
-            align-items: stretch; /* This makes both flex items stretch to the same height */
-        }
-
-        .post {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+    /* Adjust the width of each project article in the projects section */
+    .projects-section article {
+        flex: 1 1 45%; /* Adjust the width as needed */
+        margin: 10px; /* Adjust margin as needed */
+    }
    
 blockquote, q {
 	quotes: none;
