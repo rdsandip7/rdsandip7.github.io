@@ -41,6 +41,23 @@ ol, ul {
 	list-style: none;
 }
 
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #main {
+            display: flex;
+            align-items: stretch; /* This makes both flex items stretch to the same height */
+        }
+
+        .post {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+   
 blockquote, q {
 	quotes: none;
 }
