@@ -1,4 +1,4 @@
-t<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
@@ -41,7 +41,7 @@ t<!DOCTYPE HTML>
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Data Analyst</a></li>
-							<li class=""><a href="#projects">Projects</a></li>
+							<li class="active"><a href="#posts">Projects</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="linkedin.com/rdsandip7" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -53,7 +53,7 @@ t<!DOCTYPE HTML>
 					</nav>
 
 				<!-- Main -->
-					<div id="main" class="flex-container">
+					<div id="main">
 
 						<!-- Featured Post -->
 							<article class="post featured">
@@ -74,12 +74,13 @@ t<!DOCTYPE HTML>
 								    <img src="images/Sandip Dhakal.jpg" alt="" />
 								</a>
 								
-								<div id="imageModalFeatured" class="image-modal" onclick="closeModal('imageModalFeatured')">
-							        <span class="close-button" onclick="closeModal('imageModalFeatured')">&times;</span>
-							        <div class="modal-content">
-							            <img src="images/Sandip Dhakal.jpg" alt="" style="width: 100%; height: 100%;">
-							        </div>
-							    </div>
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Sandip Dhakal.jpg" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
 
 								<div class="skills-container">
 								    <!-- Key Skills Section -->
@@ -127,7 +128,7 @@ t<!DOCTYPE HTML>
 							</article>
 						<article><span><h1>Projects</h1></span></article>
 						<!-- Posts -->
-							<section class="projects-section flex-container">
+							<section class="posts">
 								
 								<article class ="supplychain">
 									<header>
@@ -139,14 +140,15 @@ t<!DOCTYPE HTML>
 								    <img src="images/supplychain.png" alt="" />
 								</a>
 								
-								<div id="imageModalSupplyChain" class="image-modal" onclick="closeModal('imageModalSupplyChain')">
-								        <span class="close-button" onclick="closeModal('imageModalSupplyChain')">&times;</span>
-								        <div class="modal-content">
-								            <img src="images/supplychain.png" alt="" style="width: 100%; height: 100%;">
-								        </div>
-								 </div>
-							
-										<p><h3> Supply Chain Analysis Project</br></h3>
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/supplychain.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
+									<p><h3> Supply Chain Analysis Project</br></h3>
 										 I'm excited to share with you a recent project that I've completed – a supply chain analysis project that explores key insights into the world of logistics and product management. This project delves into various aspects of supply chain management, including revenue analysis, product type sales, transportation cost analysis, defect rate examination, and more. I'm thrilled to provide you with a glimpse of this project's key highlights.
 										</br>
 									       <h3>Project Overview</br></h3>										
@@ -193,11 +195,11 @@ t<!DOCTYPE HTML>
 								</a>
 								
 								<!-- Image Modal -->
-								<div id="imageModalAirQuality" class="image-modal" onclick="closeModal('imageModalAirQuality')">
-								        <span class="close-button" onclick="closeModal('imageModalAirQuality')">&times;</span>
-								        <div class="modal-content">
-								            <img src="images/airquality.png" alt="" style="width: 100%; height: 100%;">
-								        </div>
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/airquality.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
 								</div>
 
 									<h2>Air Quality Data Analysis</h2>    
@@ -256,13 +258,13 @@ t<!DOCTYPE HTML>
 								    <img src="images/Salesdashboard.png" alt="" />
 								</a>
 								
-								 <!-- Image Modal -->
-							    <div id="imageModalSalesAnalysis" class="image-modal" onclick="closeModal('imageModalSalesAnalysis')">
-							        <span class="close-button" onclick="closeModal('imageModalSalesAnalysis')">&times;</span>
-							        <div class="modal-content">
-							            <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
-							        </div>
-							    </div>
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
 
 										<h2>Pizza Sales Analysis Using Power BI</h2>
 										    <p>As a data analyst, I love diving into data and extracting valuable insights. In my recent project, I used the powerful tool Power BI to analyze pizza sales data. This project allowed me to showcase my data analysis skills and create impactful visualizations.</p>
@@ -287,22 +289,20 @@ t<!DOCTYPE HTML>
 										</ul>
 								</article>
 								<article>
-									<h2><a href="#">Sales Report using SQL Server Reporting Services (SSRS)<br />
-										</a></h2>
 									<a href="#" class="image fit" onclick="openModal()">
-									    <img src="images/reportingserver.png" alt="" />
+									    <img src="images/Salesdashboard.png" alt="" />
 									</a>
 									
 									<!-- Image Modal -->
-									    <div id="imageModalSalesReport" class="image-modal" onclick="closeModal('imageModalSalesReport')">
-									        <span class="close-button" onclick="closeModal('imageModalSalesReport')">&times;</span>
-									        <div class="modal-content">
-									            <img src="images/reportingserver.png" alt="" style="width: 100%; height: 100%;">
-									        </div>
+									<div id="imageModal" class="image-modal" onclick="closeModal()">
+									    <span class="close-button" onclick="closeModal()">&times;</span>
+									    <div class="modal-content">
+									        <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
 									    </div>
-									
+									</div>
+									<h1>Sales Report using SQL Server Reporting Services (SSRS)</h1>
 									<h2>Introduction</h2>
-								        <p>I'm excited to showcase a recent project that highlights my skills in Business Intelligence and Data Analytics – the creation of a comprehensive Sales Report using SQL Server Reporting Services (SSRS). This project aims to provide detailed insights into daily sales, utilizing the AdventureWorks2017 database.</p>
+								        <p>Welcome to my portfolio! I'm excited to showcase a recent project that highlights my skills in Business Intelligence and Data Analytics – the creation of a comprehensive Sales Report using SQL Server Reporting Services (SSRS). This project aims to provide detailed insights into daily sales, utilizing the AdventureWorks2017 database.</p>
 								
 								        <h2>Project Overview</h2>
 								        <h3>Tools Used</h3>
@@ -329,9 +329,19 @@ t<!DOCTYPE HTML>
 								
 								        <h3>SSRS Report Design</h3>
 								        <p>The heart of the project lies in the design of the SSRS report. Daily sales details, including Order ID, Product Name, Unit Price, Quantity, and Total Amount (Inc. Tax), are presented in a visually appealing layout. I also addressed formatting issues for Unit Price and Order Date, ensuring a polished user interface.</p>
+								
+								        <h3>GitHub Repository</h3>
+								        <p>For those interested in exploring the project in-depth, I've made the entire codebase available on GitHub. Feel free to check it out and provide feedback.</p>
+								
+								        <h2>Future Developments</h2>
+								        <p>The project is an ongoing endeavor. Future developments include integrating the report with a Staging_Area for continuous data updates and further enhancements to create a comprehensive Business Intelligence solution.</p>
+								
 								        <h2>Conclusion</h2>
 								        <p>The Sales Report project has been a stimulating journey, pushing the boundaries of my skills in SSIS and SSRS. It reflects my commitment to delivering impactful solutions that empower businesses with valuable insights.</p>
 								
+								      
+								
+								        <p>Thank you for exploring this project with me!</p>
 									<ul class=" actions special">
 										<li><a href="https://github.com/rdsandip7/SalesReportSSRS" class="button"> Full Project is Here</a></li>
 									</ul>
@@ -410,17 +420,16 @@ t<!DOCTYPE HTML>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script>
-		   // Function to open the image modal
-			function openModal(modalId) {
-			    document.getElementById(modalId).style.display = 'flex';
-			    return false; // Add this line to prevent the default behavior
-			}
-			
-			// Function to close the image modal
-			function closeModal(modalId) {
-			    document.getElementById(modalId).style.display = 'none';
-			}
-		// Function to toggle the visibility of skills
+		    // Function to open the image modal
+		    function openModal() {
+		        document.getElementById('imageModal').style.display = 'flex';
+		    }
+		
+		    // Function to close the image modal
+		    function closeModal() {
+		        document.getElementById('imageModal').style.display = 'none';
+		    }
+			 // Function to toggle the visibility of skills
 		    function toggleSkills(listId) {
 		        var skillsList = document.getElementById(listId);
 		        var readMoreButton = document.querySelector('#' + listId + ' + .read-more-button');
