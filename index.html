@@ -419,16 +419,16 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script>
-		    // Function to open the image modal
-		    function openModal() {
-		        document.getElementById('imageModal').style.display = 'flex';
-		    }
-		
-		    // Function to close the image modal
-		    function closeModal() {
-		        document.getElementById('imageModal').style.display = 'none';
-		    }
-			 // Function to toggle the visibility of skills
+		   // Function to open the image modal
+			function openModal(modalId) {
+			    document.getElementById(modalId).style.display = 'flex';
+			}
+			
+			// Function to close the image modal
+			function closeModal(modalId) {
+			    document.getElementById(modalId).style.display = 'none';
+			}
+		// Function to toggle the visibility of skills
 		    function toggleSkills(listId) {
 		        var skillsList = document.getElementById(listId);
 		        var readMoreButton = document.querySelector('#' + listId + ' + .read-more-button');
