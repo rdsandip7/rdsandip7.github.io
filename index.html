@@ -63,14 +63,25 @@
 											document.getElementById("current_date").innerHTML = Date();
 											</script>
 									</span>
-									<h2><a href="#">And this is a<br />
-									Sandip Dhakal and my skills </a></h2>
+									<h2><a href="#">About Me <br />
+									and My Skills </a></h2>
 									<p>Greetings! I'm Sandip Dhakal, a dedicated and aspiring data analyst.<br> 
-										Armed with a Masters's in Business Information Systems from Torrens University and a Bachelor in Information Technology from the University of Newcastle,<br/> 
+										Armed with a Masters's in Business Information Systems from Torrens University and a Bachelor's in Information Technology from the University of Newcastle,<br/> 
 										I am on a relentless quest to unravel the stories hidden within data. My passion lies in translating complex information into actionable insights, and my journey is characterized by continuous learning and growth.<br/> 
 										Through this platform, I invite you to delve into my world of data exploration and discovery. Join me as I transform raw data into valuable narratives that drive informed decisions..</p>
 								</header>
-								<a href="#" class="image fit"><img src="images/Sandip Dhakal.jpg" alt="" /></a>
+								<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/Sandip Dhakal.jpg" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Sandip Dhakal.jpg" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 								<div class="skills-container">
 								    <!-- Key Skills Section -->
 								    <div class="skills-column">
@@ -94,6 +105,7 @@
 								            <li>Strong communication skills, both verbal and written, making it easy to convey complex ideas to diverse audiences.</li>
 								            <li>Uphold high work ethics and integrity, maintaining professional standards in all endeavors.</li>
 								        </ul>
+									<button class="read-more-button" onclick="toggleSkills('generalSkillsList')">Read More</button>
 								    </div>
 								
 								    <!-- Technical Skills Section -->
@@ -109,6 +121,7 @@
 								            <li>Familiar with machine learning algorithms, such as decision trees, neural networks, and random forests, for predictive modeling.</li>
 								            <li>Knowledge of big data technologies like Hadoop and Spark for managing and analyzing large-scale data.</li>
 								        </ul>
+									<button class="read-more-button" onclick="toggleSkills('generalSkillsList')">Read More</button>           
 								    </div>
 								</div>
 								
@@ -123,7 +136,18 @@
 										<h2><a href="#">Supply Chain Analysis<br />
 										</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/supplychain.png" alt="" /></a>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/supplychain.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/supplychain.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 									<p><h3> Supply Chain Analysis Project</br></h3>
 										 I'm excited to share with you a recent project that I've completed – a supply chain analysis project that explores key insights into the world of logistics and product management. This project delves into various aspects of supply chain management, including revenue analysis, product type sales, transportation cost analysis, defect rate examination, and more. I'm thrilled to provide you with a glimpse of this project's key highlights.
 										</br>
@@ -166,7 +190,18 @@
 									<header>										
 										<h2><a href="#">Air Quality Data Analysis</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/airquality.png" alt="" /></a>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/airquality.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/airquality.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
+
 									<h2>Air Quality Data Analysis</h2>    
     									<p>I'm excited to share one of my recent data analysis projects: the Air Quality Data Analysis. In this project, I delved into a dataset related to air quality, with the goal of understanding the factors that influence air quality and their impact on the environment.</p>
 									<h3>Project Overview</h3>
@@ -219,28 +254,96 @@
 										<h2><a href="#">Pizza Sales Analysis<br />
 										</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/supplychain.png" alt="" /></a>
-									<h2>Pizza Sales Analysis Using Power BI</h2>
-									    <p>As a data analyst, I love diving into data and extracting valuable insights. In my recent project, I used the powerful tool Power BI to analyze pizza sales data. This project allowed me to showcase my data analysis skills and create impactful visualizations.</p>
-									    
-									    <p>Here are some key highlights of the project:</p>
-									    
-									    <ul>
-									        <li>Total Revenue Analysis</li>
-									        <li>Total Orders and Average Pizza per Order Metrics</li>
-									        <li>Average Order Value Calculation</li>
-									        <li>Monthly Sales Trends Visualization</li>
-									        <li>Sales Breakdown by Pizza Size</li>
-									        <li>Total Pizza Sold by Category</li>
-									    </ul>
-									    
-									    <p>This analysis provided valuable insights into customer preferences and helped in making data-driven decisions for the pizza business. The project is available on GitHub for a more in-depth look: <a href="https://github.com/rdsandip7/pizzaSalesAnalysis">GitHub Project</a></p>
-									
-									    <p>Feel free to reach out if you'd like to learn more about this project or discuss data analysis opportunities.</p>
-									</div>
+									<a href="#" class="image fit" onclick="openModal()">
+								    <img src="images/Salesdashboard.png" alt="" />
+								</a>
+								
+								<!-- Image Modal -->
+								<div id="imageModal" class="image-modal" onclick="closeModal()">
+								    <span class="close-button" onclick="closeModal()">&times;</span>
+								    <div class="modal-content">
+								        <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
+								    </div>
+								</div>
 
+										<h2>Pizza Sales Analysis Using Power BI</h2>
+										    <p>As a data analyst, I love diving into data and extracting valuable insights. In my recent project, I used the powerful tool Power BI to analyze pizza sales data. This project allowed me to showcase my data analysis skills and create impactful visualizations.</p>
+										    
+										    <p>Here are some key highlights of the project:</p>
+										    
+										    <ul>
+										        <li>Total Revenue Analysis</li>
+										        <li>Total Orders and Average Pizza per Order Metrics</li>
+										        <li>Average Order Value Calculation</li>
+										        <li>Monthly Sales Trends Visualization</li>
+										        <li>Sales Breakdown by Pizza Size</li>
+										        <li>Total Pizza Sold by Category</li>
+										    </ul>
+										    
+										    <p>This analysis provided valuable insights into customer preferences and helped in making data-driven decisions for the pizza business. The project is available on GitHub for a more in-depth look: <a href="https://github.com/rdsandip7/pizzaSalesAnalysis">GitHub Project</a></p>
+										
+										    <p>Feel free to reach out if you'd like to learn more about this project or discuss data analysis opportunities.</p>
+										
+										<ul class=" actions special">
+											<li><a href="https://github.com/rdsandip7/pizzaSalesAnalysis" class="button"> Full Project is Here</a></li>
+										</ul>
+								</article>
+								<article>
+									<a href="#" class="image fit" onclick="openModal()">
+									    <img src="images/Salesdashboard.png" alt="" />
+									</a>
+									
+									<!-- Image Modal -->
+									<div id="imageModal" class="image-modal" onclick="closeModal()">
+									    <span class="close-button" onclick="closeModal()">&times;</span>
+									    <div class="modal-content">
+									        <img src="images/Salesdashboard.png" alt="" style="width: 100%; height: 100%;">
+									    </div>
+									</div>
+									<h1>Sales Report using SQL Server Reporting Services (SSRS)</h1>
+									<h2>Introduction</h2>
+								        <p>Welcome to my portfolio! I'm excited to showcase a recent project that highlights my skills in Business Intelligence and Data Analytics – the creation of a comprehensive Sales Report using SQL Server Reporting Services (SSRS). This project aims to provide detailed insights into daily sales, utilizing the AdventureWorks2017 database.</p>
+								
+								        <h2>Project Overview</h2>
+								        <h3>Tools Used</h3>
+								        <ul>
+								            <li>Visual Studio 2015</li>
+								            <li>SQL Server Reporting Services (SSRS)</li>
+								            <li>SQL Server Integration Services (SSIS)</li>
+								            <li>AdventureWorks2017 Database</li>
+								        </ul>
+								
+								        <h3>Objectives</h3>
+								        <ul>
+								            <li>Develop a dynamic Sales Report with a user-friendly interface.</li>
+								            <li>Utilize SSIS for data cleaning and transformation.</li>
+								            <li>Implement SSRS for visually appealing and insightful data representation.</li>
+								        </ul>
+								
+								        <h2>Project Highlights</h2>
+								        <h3>Visual Studio Integration</h3>
+								        <p>I initiated the project by creating an SSRS project in Visual Studio 2015, seamlessly integrating it with the AdventureWorks2017 database. This laid the foundation for a robust reporting system.</p>
+								
+								        <h3>Data Cleansing with SSIS</h3>
+								        <p>Addressing the challenge of incorrect data, particularly in fields like City, StateProvinceCode, and CountryCode, I leveraged SSIS to perform data cleaning and transformation. Conditional Splits and Derived Columns were pivotal in ensuring data accuracy.</p>
+								
+								        <h3>SSRS Report Design</h3>
+								        <p>The heart of the project lies in the design of the SSRS report. Daily sales details, including Order ID, Product Name, Unit Price, Quantity, and Total Amount (Inc. Tax), are presented in a visually appealing layout. I also addressed formatting issues for Unit Price and Order Date, ensuring a polished user interface.</p>
+								
+								        <h3>GitHub Repository</h3>
+								        <p>For those interested in exploring the project in-depth, I've made the entire codebase available on GitHub. Feel free to check it out and provide feedback.</p>
+								
+								        <h2>Future Developments</h2>
+								        <p>The project is an ongoing endeavor. Future developments include integrating the report with a Staging_Area for continuous data updates and further enhancements to create a comprehensive Business Intelligence solution.</p>
+								
+								        <h2>Conclusion</h2>
+								        <p>The Sales Report project has been a stimulating journey, pushing the boundaries of my skills in SSIS and SSRS. It reflects my commitment to delivering impactful solutions that empower businesses with valuable insights.</p>
+								
+								      
+								
+								        <p>Thank you for exploring this project with me!</p>
 									<ul class=" actions special">
-										<li><a href="https://github.com/rdsandip7/pizzaSalesAnalysis" class="button"> Full Project is Here</a></li>
+										<li><a href="https://github.com/rdsandip7/SalesReportSSRS" class="button"> Full Project is Here</a></li>
 									</ul>
 								</article>
 								
@@ -316,6 +419,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+		    // Function to open the image modal
+		    function openModal() {
+		        document.getElementById('imageModal').style.display = 'flex';
+		    }
+		
+		    // Function to close the image modal
+		    function closeModal() {
+		        document.getElementById('imageModal').style.display = 'none';
+		    }
+			 // Function to toggle the visibility of skills
+		    function toggleSkills(listId) {
+		        var skillsList = document.getElementById(listId);
+		        var readMoreButton = document.querySelector('#' + listId + ' + .read-more-button');
+		
+		        if (skillsList.style.maxHeight) {
+		            skillsList.style.maxHeight = null;
+		            readMoreButton.innerHTML = 'Read More';
+		        } else {
+		            skillsList.style.maxHeight = skillsList.scrollHeight + 'px';
+		            readMoreButton.innerHTML = 'Read Less';
+		        }
+		    }
+		</script>
+
 
 	</body>
 </html>
