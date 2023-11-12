@@ -4730,3 +4730,61 @@ input, select, textarea {
 		}
 
 	}
+/* Skills Section */
+.skills-section {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+}
+
+.skills-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Skill Categories Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Skill Category */
+.skill-category {
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skill-category h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Skill */
+.skill {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Skill Name */
+.skill-name {
+    font-size: 0.9em;
+    color: #333;
+}
