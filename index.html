@@ -72,76 +72,69 @@
                     <img src="images/Sandip Dhakal.jpg" alt="Sandip Dhakal" />
                 </a>
                 
-                <!-- Image Modal -->
-                <div id="imageModal" class="image-modal" onclick="closeModal()">
-                    <span class="close-button" onclick="closeModal(event)">&times;</span>
-                    <div class="modal-content">
-                        <img src="images/Sandip Dhakal.jpg" alt="Sandip Dhakal" style="width: 100%; height: 100%;">
-                    </div>
-                </div>
+              <!-- Image Modal -->
+				<div id="imageModal" class="image-modal" onclick="closeModal()">
+					<span class="close-button" onclick="closeModal(event)">&times;</span>
+					<div class="modal-content">
+						<img id="zoomedImage" src="images/Sandip Dhakal.jpg" alt="Sandip Dhakal" style="width: 100%; height: 100%;">
+					</div>
+				</div>
 
-                <div class="skills-container">
-                   <!-- Skills Section -->
-                    <section id="skills" class="skills-section">
-                        <h2>Skills</h2>
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
 
-                        <!-- Skill Categories Container -->
-                        <div class="skills-container">
+    <h2 class="section-title">Skills</h2>
 
-                            <!-- Programming Languages -->
-                            <div class="skill-category">
-                                <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                                <div class="skills-list">
-                                    <div class="skill">
-                                        <span class="skill-name">Python</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">R</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">SQL</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">SAS</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">Java</span>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Skill Categories Container -->
+    <div class="skills-container">
 
-                            <!-- Data Analysis Tools -->
-                            <div class="skill-category">
-                                <h3><i class="fas fa-chart-bar"></i> Data Analysis Tools</h3>
-                                <div class="skills-list">
-                                    <div class="skill">
-                                        <span class="skill-name">Tableau</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">Power BI</span>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Technical Skills -->
+        <div class="skill-category">
+            <h3 class="category-title">Technical Skills</h3>
+            <ul class="skills-list">
+                <li class="skill">Proficient in <strong>Python</strong>, <strong>R</strong>, <strong>SQL</strong>, <strong>SAS</strong>, and <strong>Java</strong></li>
+                <li class="skill">Experience with <strong>Tableau</strong> and <strong>Power BI</strong></li>
+                <li class="skill">Skilled in <strong>Microsoft Excel</strong> and <strong>Google Sheets</strong></li>
+                <li class="skill">Familiarity with <strong>MySQL</strong>, <strong>SQLite</strong>, and <strong>MongoDB</strong></li>
+                <li class="skill">Knowledge of <strong>ETL</strong>, data modeling, and integration</li>
+                <li class="skill">Experience in <strong>data mining</strong> techniques</li>
+                <li class="skill">Familiarity with <strong>machine learning</strong> algorithms</li>
+                <li class="skill">Knowledge of <strong>Hadoop</strong> and <strong>Spark</strong></li>
+            </ul>
+        </div>
 
-                            <!-- Database Management Systems -->
-                            <div class="skill-category">
-                                <h3><i class="fas fa-database"></i> Database Management Systems</h3>
-                                <div class="skills-list">
-                                    <div class="skill">
-                                        <span class="skill-name">MySQL</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">SQLite</span>
-                                    </div>
-                                    <div class="skill">
-                                        <span class="skill-name">MongoDB</span>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Key Skills -->
+        <div class="skill-category">
+            <h3 class="category-title">Key Skills</h3>
+            <ul class="skills-list">
+                <li class="skill">Strong analytical and <strong>problem-solving</strong> skills</li>
+                <li class="skill"><strong>Effective communication</strong> and presentation skills</li>
+                <li class="skill">Experience with <strong>data visualization</strong> tools</li>
+                <li class="skill">Application of <strong>data mining</strong> techniques</li>
+                <li class="skill">Quick <strong>adaptability</strong> to new technologies</li>
+            </ul>
+        </div>
 
-                        </div>
-                    </section>
-                </div>
+        <!-- Soft Skills -->
+        <div class="skill-category">
+            <h3 class="category-title">Soft Skills</h3>
+            <ul class="skills-list">
+                <li class="skill"><strong>Teamwork</strong> and collaboration</li>
+                <li class="skill">Effective <strong>time management</strong></li>
+                <li class="skill">Adaptability to evolving project requirements</li>
+                <li class="skill"><strong>Clear and concise</strong> verbal and written communication</li>
+                <li class="skill">Demonstrated <strong>work ethics</strong> and professionalism</li>
+                <li class="skill"><strong>Attention to detail</strong> for accurate results</li>
+                <li class="skill">Efficient <strong>multitasking</strong></li>
+                <li class="skill"><strong>Problem-solving</strong> and troubleshooting</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+
                 <ul class="actions special">
                     <li><a href="resume.pdf" class="button">View Resume</a></li>
                 </ul>
@@ -152,9 +145,17 @@
 					<header>
 						<h2><a href="#">Supply Chain Analysis</a></h2>
 					</header>
-					<a href="#" class="image fit" onclick="openModal('supplychain')">
+					<!-- Supply Chain Analysis Image -->
+					<a href="#" class="image fit" onclick="openModalSupplyChain()">
 						<img src="images/supplychain.png" alt="Supply Chain Analysis" />
 					</a>
+					<!-- Supply Chain Analysis Image Modal -->
+						<div id="supplychainModal" class="image-modal" onclick="closeModal(event)">
+							<span class="close-button" onclick="closeModal(event)">&times;</span>
+							<div class="modal-content">
+								<img src="images/supplychain.png" alt="Supply Chain Analysis" style="width: 100%; height: 100%;">
+							</div>
+						</div>
 					
   						<p>
 									<h3>Supply Chain Analysis Project</h3>
@@ -196,9 +197,17 @@
 					<header>
 						<h2><a href="#">Air Quality Data Analysis</a></h2>
 					</header>
-					<a href="#" class="image fit" onclick="openModal('airquality')">
+					<!-- Air Quality Data Analysis Image -->
+					<a href="#" class="image fit" onclick="openModalAirQuality()">
 						<img src="images/airquality.png" alt="Air Quality Data Analysis" />
 					</a>
+					<!-- Air Quality Data Analysis Image Modal -->
+					<div id="airqualityModal" class="image-modal" onclick="closeModal(event)">
+						<span class="close-button" onclick="closeModal(event)">&times;</span>
+						<div class="modal-content">
+							<img src="images/airquality.png" alt="Air Quality Data Analysis" style="width: 100%; height: 100%;">
+						</div>
+					</div>
 					<p>
 									<h2>Air Quality Data Analysis</h2>
   									<p>
@@ -250,9 +259,17 @@
 					<header>
 						<h2><a href="#">Pizza Sales Analysis</a></h2>
 					</header>
-					<a href="#" class="image fit" onclick="openModal('salesanalysis')">
+					<!-- Pizza Sales Analysis Image -->
+					<a href="#" class="image fit" onclick="closeModal(event)">
 						<img src="images/Salesdashboard.png" alt="Pizza Sales Analysis" />
 					</a>
+					<!-- Pizza Sales Analysis Image Modal -->
+					<div id="salesanalysisModal" class="image-modal" onclick="closeModal()">
+						<span class="close-button" onclick="closeModal(event)">&times;</span>
+						<div class="modal-content">
+							<img src="images/Salesdashboard.png" alt="Pizza Sales Analysis" style="width: 100%; height: 100%;">
+						</div>
+					</div>
 					<p>
 									<h2>Pizza Sales Analysis Using Power BI</h2>
 									<p>
@@ -285,9 +302,17 @@
 					<header>
 						<h2><a href="#">Sales Report using SQL Server Reporting Services (SSRS)</a></h2>
 					</header>
-					<a href="#" class="image fit" onclick="openModal('SalesReportSSRS')">
+					<!-- Sales Report SSRS Image -->
+					<a href="#" class="image fit" onclick="openModalSalesReportSSRS()">
 						<img src="images/Salesdashboard.png" alt="Sales Report SSRS" />
 					</a>
+					<!-- Sales Report SSRS Image Modal -->
+					<div id="SalesReportSSRSModal" class="image-modal" onclick="closeModal(event)"">
+						<span class="close-button" onclick="closeModal(event)">&times;</span>
+						<div class="modal-content">
+							<img src="images/Salesdashboard.png" alt="Sales Report SSRS" style="width: 100%; height: 100%;">
+						</div>
+					</div>
 					<p>
 								I'm excited to showcase a recent project that highlights my skills in Business Intelligence and Data Analytics – the creation of a comprehensive Sales Report using SQL Server Reporting Services (SSRS). This project aims to provide detailed insights into daily sales, utilizing the AdventureWorks2017 database.
 								</p>
@@ -400,16 +425,27 @@
 
                 <!-- JavaScript for smooth scrolling -->
                <script>
-					// Function to open the image modal
-					function openModal() {
+				    // Function to open the image modal
+					function openModal(event) {
+						// Prevent the default action of the anchor element
+						event.preventDefault();
+
+						// Get the clicked image source and set it to the modal's image
+						var clickedImage = event.target.src;
+						document.getElementById('zoomedImage').src = clickedImage;
+
+						// Display the image modal
 						document.getElementById('imageModal').style.display = 'flex';
 					}
-				
+
 					// Function to close the image modal
-					function closeModal() {
-						document.getElementById('imageModal').style.display = 'none';
+					function closeModal(event) {
+						// Check if the click is on the modal or the close button
+						if (event.target === document.getElementById('imageModal') || event.target.className === 'close-button') {
+							document.getElementById('imageModal').style.display = 'none';
+						}
 					}
-					// Function to toggle the visibility of skills
+									// Function to toggle the visibility of skills
 					function toggleSkills(listId) {
 						var skillsList = document.getElementById(listId);
 						var readMoreButton = document.querySelector('#' + listId + ' + .read-more-button');
@@ -422,6 +458,25 @@
 							readMoreButton.innerHTML = 'Read Less';
 						}
 					}
+					// Function to open the image modal for Supply Chain Analysis
+						function openModalSupplyChain() {
+							document.getElementById('supplychainModal').style.display = 'flex';
+						}
+
+						// Function to open the image modal for Air Quality Data Analysis
+						function openModalAirQuality() {
+							document.getElementById('airqualityModal').style.display = 'flex';
+						}
+
+						// Function to open the image modal for Pizza Sales Analysis
+						function openModalSalesAnalysis() {
+							document.getElementById('salesanalysisModal').style.display = 'flex';
+						}
+
+						// Function to open the image modal for Sales Report SSRS
+						function openModalSalesReportSSRS() {
+							document.getElementById('SalesReportSSRSModal').style.display = 'flex';
+						}
 				</script>
 
                 <!-- JavaScript for displaying the current date -->
