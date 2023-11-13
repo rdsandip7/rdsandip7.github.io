@@ -4775,3 +4775,11 @@ input, select, textarea {
 .skill strong {
     color: #007bff;
 }
+.pagination-arrow, .page-numbers span {
+    cursor: pointer;
+  }
+
+  .pagination-arrow:hover, .page-numbers span:hover {
+    cursor: pointer;
+    text-decoration: underline; /* Optional: Add underline effect on hover */
+  }
