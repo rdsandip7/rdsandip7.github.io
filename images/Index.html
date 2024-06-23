@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bridge Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <!-- Navbar -->
+        <div class="navbar">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+            <h1>Student Bridge</h1>
+            <i class="fas fa-home" onclick="navigateHome()"></i>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="menu" id="menu" style="display: none;">
+            <button onclick="navigate('profilesScreen')"><i class="fas fa-user"></i> Profiles</button>
+            <button onclick="navigate('messagesScreen')"><i class="fas fa-envelope"></i> Messages</button>
+            <button onclick="navigate('resourceHubScreen')"><i class="fas fa-database"></i> Resource Hub</button>
+            <button onclick="navigate('wellbeingScreen')"><i class="fas fa-heart"></i> Wellbeing</button>
+            <button onclick="navigate('eventsScreen')"><i class="fas fa-calendar-alt"></i> Events</button>
+            <button onclick="navigate('feedbackScreen')"><i class="fas fa-comment"></i> Feedback</button>
+        </div>
+
+        <!-- Screens -->
+        <div class="screen" id="homeScreen">
+            <div class="connection-card" id="connectionCard">
+                <img src="sandip.jpg" alt="Student Photo">
+                <div class="overlay">
+                    <i class="fas fa-ellipsis-v three-dot-menu" onclick="toggleProfileMenu('profileMenu0')"></i>
+                    <div class="profile-menu" id="profileMenu0" style="display: none;">
+                        <button onclick="viewProfile(0)">View Profile</button>
+                    </div>
+                    <h2>Sandip Dhakal</h2>
+                    <p class="location">Country: Nepal</p>
+                    <div class="buttons">
+                        <button class="connect" onclick="nextConnection(true)"><i class="fas fa-heart"></i></button>
+                        <button class="ignore" onclick="nextConnection(false)"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="confirmation" id="confirmation" style="display: none;">
+            <p id="confirmationText"></p>
+        </div>
+
+        <div class="screen" id="profilesScreen" style="display: none;">
+            <div class="mobile-frame mobile-frame-profile">
+                <h1>Create Your Profile</h1>
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i></label>
+                        <input type="text" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age"><i class="fas fa-birthday-cake"></i></label>
+                        <input type="text" id="age" name="age" placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="university"><i class="fas fa-graduation-cap"></i></label>
+                        <input type="text" id="university" name="university" placeholder="University">
+                    </div>
+                    <div class="form-group">
+                        <label for="course"><i class="fas fa-book-open"></i></label>
+                        <input type="text" id="course" name="course" placeholder="Course">
+                    </div>
+                    <div class="form-group">
+                        <label for="interests"><i class="fas fa-heart"></i></label>
+                        <input type="text" id="interests" name="interests" placeholder="Interests">
+                    </div>
+                    <div class="form-group">
+                        <label for="goals"><i class="fas fa-bullseye"></i></label>
+                        <input type="text" id="goals" name="goals" placeholder="Goals">
+                    </div>
+                    <button type="button" onclick="saveProfile()">Save Profile</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="screen" id="messagesScreen" style="display: none;">
+            <h1>Messages</h1>
+            <div class="message-list">
+                <div class="message-item">
+                    <div class="user-avatar">
+                        <img src="sandip50.jpg" alt="User Avatar">
+                    </div>
+                    <div class="message-content">
+                        <h3>Sandip Dhakal</h3>
+                        <p>Last message sent: see you soon</p>
+                    </div>
+                    <div class="message-actions">
+                        <button><i class="fas fa-envelope"></i> Message</button>
+                    </div>
+                </div>
+                <div class="message-item">
+                    <div class="user-avatar">
+                        <img src="judah50.jpg" alt="User Avatar">
+                    </div>
+                    <div class="message-content">
+                        <h3>Judah</h3>
+                        <p>Last message sent: Will be attending too</p>
+                    </div>
+                    <div class="message-actions">
+                        <button><i class="fas fa-envelope"></i> Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen" id="resourceHubScreen" style="display: none;">
+            <h1>Resource Hub</h1>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <i class="fas fa-home"></i>
+                    <button>Housing</button>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-briefcase"></i>
+                    <button>Jobs</button>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-bus"></i>
+                    <button>Transportation</button>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-utensils"></i>
+                    <button>Food</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen" id="wellbeingScreen" style="display: none;">
+            <h1>Wellbeing Support</h1>
+            <div class="wellbeing-list">
+                <div class="wellbeing-item">
+                    <i class="fas fa-user-md"></i>
+                    <button>Counseling Services</button>
+                </div>
+                <div class="wellbeing-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <button>Wellness Resources</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen" id="eventsScreen" style="display: none;">
+            <h1>Events</h1>
+            <div class="event-list">
+                <div class="event-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <button>Workshop: AI Basics</button>
+                    <div class="event-actions">
+                        <button><i class="fas fa-user-plus"></i> Join Now</button>
+                        <button><i class="far fa-bell"></i> Remind Me Later</button>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <i class="fas fa-chess"></i>
+                    <button>Club Meeting: Chess Club</button>
+                    <div class="event-actions">
+                        <button><i class="fas fa-user-plus"></i> Join Now</button>
+                        <button><i class="far fa-bell"></i> Remind Me Later</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen" id="feedbackScreen" style="display: none;">
+            <h1>Feedback</h1>
+            <div class="feedback-list">
+                <button><i class="far fa-comment-alt"></i> General Feedback</button>
+                <button><i class="fas fa-comments"></i> Feature Feedback</button>
+                <button><i class="far fa-clipboard"></i> Surveys</button>
+            </div>
+        </div>
+
+        <!-- User Profile Screen -->
+        <div class="screen" id="userProfileScreen" style="display: none;">
+            <div class="profile-header">
+                <img id="profileBackground" src="" alt="User Background">
+                <div class="profile-avatar">
+                    <img id="profilePhoto" src="" alt="User Photo">
+                </div>
+            </div>
+            <div class="profile-info">
+                <h2 id="profileName"></h2>
+                <p id="profileLocation"></p>
+                <h3>Professional Experience</h3>
+                <div id="profileExperience"></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
