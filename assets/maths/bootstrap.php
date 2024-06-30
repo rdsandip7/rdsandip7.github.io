@@ -1,6 +1,6 @@
 <?php
 //define base url for the manual
-define('BASE_URL', 'http://localhost:7777/math');
+define('BASE_URL', 'https://sandipdhakal.com.np/assets/maths/');
  //create array of pages that needs to be displayed
   $pages = [
     'welcome2'=> 'welcome2',
