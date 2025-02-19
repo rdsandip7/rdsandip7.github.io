@@ -3,198 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Bridge Prototype</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pridge Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff0000;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="mobile-frame">
-        <!-- Navbar -->
-        <div class="navbar">
-            <i class="fas fa-bars" onclick="toggleMenu()"></i>
-            <h1>Student Bridge</h1>
-            <i class="fas fa-home" onclick="navigateHome()"></i>
-        </div>
 
-        <!-- Navigation Menu -->
-        <div class="menu" id="menu" style="display: none;">
-            <button onclick="navigate('profilesScreen')"><i class="fas fa-user"></i> Profiles</button>
-            <button onclick="navigate('messagesScreen')"><i class="fas fa-envelope"></i> Messages</button>
-            <button onclick="navigate('resourceHubScreen')"><i class="fas fa-database"></i> Resource Hub</button>
-            <button onclick="navigate('wellbeingScreen')"><i class="fas fa-heart"></i> Wellbeing</button>
-            <button onclick="navigate('eventsScreen')"><i class="fas fa-calendar-alt"></i> Events</button>
-            <button onclick="navigate('feedbackScreen')"><i class="fas fa-comment"></i> Feedback</button>
-        </div>
+    <div class="container">
+        <h1>Pridge Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> [Insert Date]</p>
 
-        <!-- Screens -->
-        <div class="screen" id="homeScreen">
-            <div class="connection-card" id="connectionCard">
-                <img src="sandip.jpg" alt="Student Photo">
-                <div class="overlay">
-                    <i class="fas fa-ellipsis-v three-dot-menu" onclick="toggleProfileMenu('profileMenu0')"></i>
-                    <div class="profile-menu" id="profileMenu0" style="display: none;">
-                        <button onclick="viewProfile(0)">View Profile</button>
-                    </div>
-                    <h2>Sandip Dhakal</h2>
-                    <p class="location">Country: Nepal</p>
-                    <div class="buttons">
-                        <button class="connect" onclick="nextConnection(true)"><i class="fas fa-heart"></i></button>
-                        <button class="ignore" onclick="nextConnection(false)"><i class="fas fa-times"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Pridge</strong>! Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
 
-        <div class="confirmation" id="confirmation" style="display: none;">
-            <p id="confirmationText"></p>
-        </div>
+        <h2>2. Information We Collect</h2>
+        <p>We collect the following types of information:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> Name, email, phone number, date of birth, university, major, location, and profile picture.</li>
+            <li><strong>Authentication Information:</strong> Firebase Authentication for login and account security.</li>
+            <li><strong>Usage Data:</strong> Profile swipes, preferences, and app activity.</li>
+            <li><strong>Device Information:</strong> Device model, operating system, and unique device identifiers.</li>
+        </ul>
 
-        <div class="screen" id="profilesScreen" style="display: none;">
-            <div class="mobile-frame mobile-frame-profile">
-                <h1>Create Your Profile</h1>
-                <form id="profileForm">
-                    <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i></label>
-                        <input type="text" id="name" name="name" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="age"><i class="fas fa-birthday-cake"></i></label>
-                        <input type="text" id="age" name="age" placeholder="Age">
-                    </div>
-                    <div class="form-group">
-                        <label for="university"><i class="fas fa-graduation-cap"></i></label>
-                        <input type="text" id="university" name="university" placeholder="University">
-                    </div>
-                    <div class="form-group">
-                        <label for="course"><i class="fas fa-book-open"></i></label>
-                        <input type="text" id="course" name="course" placeholder="Course">
-                    </div>
-                    <div class="form-group">
-                        <label for="interests"><i class="fas fa-heart"></i></label>
-                        <input type="text" id="interests" name="interests" placeholder="Interests">
-                    </div>
-                    <div class="form-group">
-                        <label for="goals"><i class="fas fa-bullseye"></i></label>
-                        <input type="text" id="goals" name="goals" placeholder="Goals">
-                    </div>
-                    <button type="button" onclick="saveProfile()">Save Profile</button>
-                </form>
-            </div>
-        </div>
+        <h2>3. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Create and manage your user account.</li>
+            <li>Facilitate profile matching and social interactions.</li>
+            <li>Personalize your user experience.</li>
+            <li>Enhance app security and prevent fraud.</li>
+            <li>Communicate important updates and security alerts.</li>
+        </ul>
 
-        <div class="screen" id="messagesScreen" style="display: none;">
-            <h1>Messages</h1>
-            <div class="message-list">
-                <div class="message-item">
-                    <div class="user-avatar">
-                        <img src="sandip50.jpg" alt="User Avatar">
-                    </div>
-                    <div class="message-content">
-                        <h3>Sandip Dhakal</h3>
-                        <p>Last message sent: see you soon</p>
-                    </div>
-                    <div class="message-actions">
-                        <button><i class="fas fa-envelope"></i> Message</button>
-                    </div>
-                </div>
-                <div class="message-item">
-                    <div class="user-avatar">
-                        <img src="judah50.jpg" alt="User Avatar">
-                    </div>
-                    <div class="message-content">
-                        <h3>Judah</h3>
-                        <p>Last message sent: Will be attending too</p>
-                    </div>
-                    <div class="message-actions">
-                        <button><i class="fas fa-envelope"></i> Message</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>4. How We Share Your Information</h2>
+        <p>We do not sell or rent your personal information. However, we may share your data in the following cases:</p>
+        <ul>
+            <li><strong>With other users:</strong> Your profile information is visible to other users.</li>
+            <li><strong>With service providers:</strong> Firebase and other third-party services for hosting, analytics, and security.</li>
+            <li><strong>For legal reasons:</strong> If required by law or to protect our rights.</li>
+        </ul>
 
-        <div class="screen" id="resourceHubScreen" style="display: none;">
-            <h1>Resource Hub</h1>
-            <div class="resource-list">
-                <div class="resource-item">
-                    <i class="fas fa-home"></i>
-                    <button>Housing</button>
-                </div>
-                <div class="resource-item">
-                    <i class="fas fa-briefcase"></i>
-                    <button>Jobs</button>
-                </div>
-                <div class="resource-item">
-                    <i class="fas fa-bus"></i>
-                    <button>Transportation</button>
-                </div>
-                <div class="resource-item">
-                    <i class="fas fa-utensils"></i>
-                    <button>Food</button>
-                </div>
-            </div>
-        </div>
+        <h2>5. Data Security</h2>
+        <p>We implement security measures such as encryption and authentication to protect your information. However, no method of transmission over the internet is 100% secure.</p>
 
-        <div class="screen" id="wellbeingScreen" style="display: none;">
-            <h1>Wellbeing Support</h1>
-            <div class="wellbeing-list">
-                <div class="wellbeing-item">
-                    <i class="fas fa-user-md"></i>
-                    <button>Counseling Services</button>
-                </div>
-                <div class="wellbeing-item">
-                    <i class="fas fa-heartbeat"></i>
-                    <button>Wellness Resources</button>
-                </div>
-            </div>
-        </div>
+        <h2>6. Your Choices and Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Update or delete your profile information.</li>
+            <li>Request a copy of your data.</li>
+            <li>Withdraw consent and delete your account.</li>
+        </ul>
 
-        <div class="screen" id="eventsScreen" style="display: none;">
-            <h1>Events</h1>
-            <div class="event-list">
-                <div class="event-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <button>Workshop: AI Basics</button>
-                    <div class="event-actions">
-                        <button><i class="fas fa-user-plus"></i> Join Now</button>
-                        <button><i class="far fa-bell"></i> Remind Me Later</button>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <i class="fas fa-chess"></i>
-                    <button>Club Meeting: Chess Club</button>
-                    <div class="event-actions">
-                        <button><i class="fas fa-user-plus"></i> Join Now</button>
-                        <button><i class="far fa-bell"></i> Remind Me Later</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>7. Third-Party Links and Services</h2>
+        <p>Pridge may contain links to third-party services (e.g., Firebase, Google Authentication). We are not responsible for their privacy policies.</p>
 
-        <div class="screen" id="feedbackScreen" style="display: none;">
-            <h1>Feedback</h1>
-            <div class="feedback-list">
-                <button><i class="far fa-comment-alt"></i> General Feedback</button>
-                <button><i class="fas fa-comments"></i> Feature Feedback</button>
-                <button><i class="far fa-clipboard"></i> Surveys</button>
-            </div>
-        </div>
+        <h2>8. Children’s Privacy</h2>
+        <p>Pridge is not intended for users under the age of 13. If we discover that a child under 13 has provided us with personal information, we will delete it.</p>
 
-        <!-- User Profile Screen -->
-        <div class="screen" id="userProfileScreen" style="display: none;">
-            <div class="profile-header">
-                <img id="profileBackground" src="" alt="User Background">
-                <div class="profile-avatar">
-                    <img id="profilePhoto" src="" alt="User Photo">
-                </div>
-            </div>
-            <div class="profile-info">
-                <h2 id="profileName"></h2>
-                <p id="profileLocation"></p>
-                <h3>Professional Experience</h3>
-                <div id="profileExperience"></div>
-            </div>
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or other communication channels.</p>
+
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at <strong>rdsandip7@gmail.com</strong>.</p>
+
+        <div class="footer">
+            <p>&copy; 2024 Pridge. All rights reserved.</p>
         </div>
     </div>
-    <script src="scripts.js"></script>
+
 </body>
 </html>
