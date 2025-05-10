@@ -1,0 +1,13 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "Sample Project",
+        "category": "web",
+        "description": "Project description",
+        "tech": ["HTML", "CSS"],
+        "image": "project1.jpg",
+        "date": "2024-01"
+      }
+    ]
+  }
