@@ -70,11 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-//tools 
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tools-carousel');
     const controls = document.querySelectorAll('.carousel-control');
     const filterButtons = document.querySelectorAll('.carousel-btn');
+    let autoSlideInterval;
+    const autoSlideSpeed = 3000; // milliseconds
 
     // Carousel Navigation
     controls.forEach(control => {
@@ -93,9 +94,15 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
 
             document.querySelectorAll('.tool-card').forEach(card => {
-                card.style.display = category === 'all' || card.dataset.category === category ?
-                    'block' : 'none';
+                card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
             });
+
+            // Start or stop auto-slide based on the selected category
+            if (category === 'all') {
+                startAutoSlide();
+            } else {
+                stopAutoSlide();
+            }
         });
     });
 
@@ -125,6 +132,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const walk = (x - startX) * 2;
         carousel.scrollLeft = scrollLeft - walk;
     });
+
+    // Auto-slide functionality
+    function startAutoSlide() {
+        stopAutoSlide(); // Ensure any existing interval is cleared
+        autoSlideInterval = setInterval(() => {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        }, autoSlideSpeed);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
 });
 //resume
 

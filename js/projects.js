@@ -153,12 +153,40 @@ function initModalHandlers() {
         }
     });
 }
+// Add these functions to handle fullscreen image
+function showFullscreenImage(src) {
+    const viewer = document.getElementById('fullscreenViewer');
+    const img = document.getElementById('fullscreenImage');
+    img.src = src;
+    viewer.style.display = 'flex';
+    
+    // Add keyboard listener
+    document.addEventListener('keydown', handleFullscreenKeyPress);
+}
+
+function hideFullscreenImage() {
+    const viewer = document.getElementById('fullscreenViewer');
+    viewer.style.display = 'none';
+    document.removeEventListener('keydown', handleFullscreenKeyPress);
+}
+
+function handleFullscreenKeyPress(e) {
+    if (e.key === 'Escape') hideFullscreenImage();
+}
+
+// Add event listeners
+document.getElementById('closeFullscreen').addEventListener('click', hideFullscreenImage);
+document.getElementById('fullscreenViewer').addEventListener('click', function(e) {
+    if (e.target === this) hideFullscreenImage();
+});
 
 
 function showProjectDetails(projectId) {
     const project = allProjects.find(p => p.id == projectId);
     const modal = document.getElementById('projectModal');
-    
+     // Add click handler to modal image
+    const modalImage = modal.querySelector('.project-image-main');
+    modalImage.onclick = () => showFullscreenImage(modalImage.src);
     // Set content
     modal.querySelector('.project-title').textContent = project.title;
     modal.querySelector('.project-image-main').src = `images/${project.image}`;
@@ -228,17 +256,3 @@ function showProjectDetails(projectId) {
         });
     }, 100);
 }
-// Function to show enlarged image
-function showEnlargedImage(imageSrc) {
-    const enlargedImageModal = new bootstrap.Modal(document.getElementById('enlargedImageModal'));
-    const enlargedImage = document.querySelector('.enlarged-image');
-    enlargedImage.src = imageSrc;
-    enlargedImageModal.show();
-}
-
-// Add event listener to project images
-document.querySelectorAll('.project-image img').forEach(img => {
-    img.addEventListener('click', () => {
-        showEnlargedImage(img.src);
-    });
-});
