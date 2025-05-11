@@ -185,26 +185,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-//project 
-document.addEventListener('DOMContentLoaded', function () {
-    const filters = document.querySelectorAll('.project-filters .btn');
-    const projects = document.querySelectorAll('.portfolio-grid .project-card');
-
-    filters.forEach(filter => {
-        filter.addEventListener('click', function () {
-            filters.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-
-            const category = this.getAttribute('data-filter');
-            projects.forEach(project => {
-                if (category === 'all') {
-                    project.style.display = 'block';
-                } else {
-                    project.style.display = project.getAttribute('data-category') === category ? 'block' : 'none';
-                }
-            });
-        });
-    });
-});
-
