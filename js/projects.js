@@ -184,9 +184,7 @@ document.getElementById('fullscreenViewer').addEventListener('click', function(e
 function showProjectDetails(projectId) {
     const project = allProjects.find(p => p.id == projectId);
     const modal = document.getElementById('projectModal');
-     // Add click handler to modal image
-    const modalImage = modal.querySelector('.project-image-main');
-    modalImage.onclick = () => showFullscreenImage(modalImage.src);
+    
     // Set content
     modal.querySelector('.project-title').textContent = project.title;
     modal.querySelector('.project-image-main').src = `images/${project.image}`;
