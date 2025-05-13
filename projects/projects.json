@@ -2,6 +2,56 @@
   "projects": [
     {
       "id": 1,
+      "title": "Air Quality Data Analysis",
+      "category": "Data Science",
+      "date": "2025-04-15",
+      "short_desc": "Highlights data-driven insights in understanding environmental factors affecting air quality.",
+      "long_desc": [
+        "<b>Project Overview</b>",
+        "<p>Data Source: I worked with a comprehensive dataset containing various attributes, including industrial activity, proximity to natural reserves, pollution levels (PM10 and PM2.5), traffic density, distance to the coast, humidity, and more.</p>",
+        "",
+        "<b>Key Insights and Visualizations</b>",
+        "<ul>",
+        "  <li><b>Industrial Activity and Proximity to Natural Reserves</b>: To investigate the relationship between industrial activity and proximity to natural reserves, I created a contingency table and performed a chi-squared test to determine whether the two variables are dependent.</li>",
+        "  <li><b>Mean PM10 Levels</b>: I compared mean PM10 levels in regions with high industrial activity (industrial codes 4 and 5) and low industrial activity (industrial codes 1 and 2). The analysis revealed significant differences between the two groups.</li>",
+        "  <li><b>Difference in Mean PM2.5 Levels</b>: I conducted a two-sample t-test to compare mean PM2.5 levels between regions with high traffic density and low traffic density. The results provided insights into the impact of traffic on air quality.</li>",
+        "  <li><b>Mean Population in Inland Regions</b>: I analyzed the mean population in inland regions by Australian state and performed a one-way ANOVA to test for significant differences among states.</li>",
+        "  <li><b>AQI vs. PM2.5</b>: Using a scatter plot and linear regression, I explored the relationship between Air Quality Index (AQI) and PM2.5 levels, providing a predictive model and a prediction interval for AQI.</li>",
+        "</ul>",
+        "",
+        "<b>Technologies Used</b>",
+        "<ul>",
+        "  <li>Python for data analysis</li>",
+        "  <li>Pandas for data manipulation</li>",
+        "  <li>Matplotlib and Seaborn for data visualization</li>",
+        "  <li>Jupyter Notebook for analysis and visualization</li>",
+        "</ul>",
+        "",
+        "<b>Conclusion</b>",
+        "<p>The Air Quality Data Analysis project highlights the significance of data-driven insights in understanding environmental factors affecting air quality. By employing statistical tests, visualizations, and regression models, I gained valuable insights into the data, which can inform environmental policies and decision-making.</p>",
+        "",
+        "<p>If you have any questions or are interested in collaborating on similar data analysis projects, please don't hesitate to contact me. Thank you for exploring this project in my portfolio!</p>"
+      ],
+      "image": "airquality.png",
+      "tech": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Jupyter Notebook"
+      ],
+      "links": {
+        "github": "#"
+      },
+      "key_metrics": [
+        "Chi-squared test for industrial activity and natural reserves",
+        "Significant differences in mean PM10 levels",
+        "Impact of traffic density on PM2.5 levels",
+        "Predictive model for AQI based on PM2.5 levels"
+      ]
+    },
+    {
+      "id": 2,
       "title": "Supply Chain Analysis Project",
       "category": "Data Analysis",
       "date": "2024-03-01",
@@ -33,7 +83,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "COVID-19 Dashboard",
       "category": "Data Visualization",
       "date": "2024-02-15",
@@ -67,60 +117,9 @@
       ]
     },
     {
-      "id": 3,
-      "title": "Air Quality Data Analysis",
-      "category": "Data Analysis",
-      "date": "2024-02-15",
-      "short_desc": "Highlights data-driven insights in understanding environmental factors affecting air quality.",
-      "long_desc": [
-        "**Project Overview**",
-        "Data Source: I worked with a comprehensive dataset containing various attributes, including industrial activity, proximity to natural reserves, pollution levels (PM10 and PM2.5), traffic density, distance to the coast, humidity, and more.",
-        "",
-        "**Key Insights and Visualizations**",
-        "Industrial Activity and Proximity to Natural Reserves: To investigate the relationship between industrial activity and proximity to natural reserves, I created a contingency table and performed a chi-squared test to determine whether the two variables are dependent.",
-        "",
-        "Mean PM10 Levels: I compared mean PM10 levels in regions with high industrial activity (industrial codes 4 and 5) and low industrial activity (industrial codes 1 and 2). The analysis revealed significant differences between the two groups.",
-        "",
-        "Difference in Mean PM2.5 Levels: I conducted a two-sample t-test to compare mean PM2.5 levels between regions with high traffic density and low traffic density. The results provided insights into the impact of traffic on air quality.",
-        "",
-        "Mean Population in Inland Regions: I analyzed the mean population in inland regions by Australian state and performed a one-way ANOVA to test for significant differences among states.",
-        "",
-        "AQI vs. PM2.5: Using a scatter plot and linear regression, I explored the relationship between Air Quality Index (AQI) and PM2.5 levels, providing a predictive model and a prediction interval for AQI.",
-        "",
-        "**Technologies Used**",
-        "Python for data analysis",
-        "Pandas for data manipulation",
-        "Matplotlib and Seaborn for data visualization",
-        "Jupyter Notebook for analysis and visualization",
-        "",
-        "**Conclusion**",
-        "The Air Quality Data Analysis project highlights the significance of data-driven insights in understanding environmental factors affecting air quality. By employing statistical tests, visualizations, and regression models, I gained valuable insights into the data, which can inform environmental policies and decision-making.",
-        "",
-        "If you have any questions or are interested in collaborating on similar data analysis projects, please don't hesitate to contact me. Thank you for exploring this project in my portfolio!"
-      ],
-      "image": "airquality.png",
-      "tech": [
-        "Python",
-        "Pandas",
-        "Matplotlib",
-        "Seaborn",
-        "Jupyter Notebook"
-      ],
-      "links": {
-        "tableau": "#",
-        "github": "#"
-      },
-      "key_metrics": [
-        "Chi-squared test for industrial activity and natural reserves",
-        "Significant differences in mean PM10 levels",
-        "Impact of traffic density on PM2.5 levels",
-        "Predictive model for AQI based on PM2.5 levels"
-      ]
-    },
-    {
       "id": 4,
       "title": "Pizza Sales Analysis Using Power BI",
-      "category": "Data Analysis",
+      "category": "Data Visualization",
       "date": "2024-02-15",
       "short_desc": "A data analysis project using Power BI to analyze pizza sales data and extract valuable insights.",
       "long_desc": [
@@ -257,28 +256,70 @@
     },
     {
       "id": 7,
-      "title": "COVID-19 Dashboard",
-      "category": "Data Visualization",
-      "date": "2024-02-15",
-      "short_desc": "Interactive Tableau pandemic tracker",
+      "title": "UFO Sightings Analysis",
+      "category": "Data Sicence",
+      "date": "2025-03-20",
+      "short_desc": "Python-powered UFO insights platform",
       "long_desc": [
-        "Global cases visualization",
-        "Vaccination progress tracking",
-        "Infection rate predictions"
+        "<b>Project Overview</b>",
+        "<p>I conducted an exploratory data analysis of 80,000+ UFO sighting reports spanning a century, using Python and Jupyter Notebook. The dataset from NUFORC/Kaggle includes geographical, temporal, and descriptive information about unidentified flying object observations worldwide.</p>",
+        "",
+        "<b>Tools & Technologies</b>",
+        "<ul>",
+        "  <li>Python (Pandas, NumPy)</li>",
+        "  <li>Plotly/Dash for interactive visualizations</li>",
+        "  <li>Folium for geospatial mapping</li>",
+        "  <li>WordCloud for text analysis</li>",
+        "  <li>Jupyter Notebook for iterative analysis</li>",
+        "</ul>",
+        "",
+        "<b>Key Insights</b>",
+        "<ul>",
+        "  <li>Temporal Trends: Sightings have exponentially increased since the 1990s, peaking in 2012</li>",
+        "  <li>Geographical Hotspots: California accounts for 12% of all US sightings (3x higher than average)</li>",
+        "  <li>Common Shapes: \"Light\" (25%), \"Circle\" (15%), and \"Triangle\" (10%) dominate reports</li>",
+        "  <li>Global Distribution: 80% of sightings come from English-speaking countries (US, CA, GB, AU)</li>",
+        "  <li>Text Patterns: Words like \"bright\", \"moving\", and \"object\" frequently appear in descriptions</li>",
+        "</ul>",
+        "",
+        "<b>Technical Highlights</b>",
+        "<ul>",
+        "  <li>Built interactive dashboard integrating 6 visualizations</li>",
+        "  <li>Implemented geospatial mapping with Folium clusters</li>",
+        "  <li>Automated datetime conversion for temporal analysis</li>",
+        "  <li>Created dynamic word cloud from 75K+ text descriptions</li>",
+        "  <li>Handled missing data (8% temporal inaccuracies)</li>",
+        "</ul>",
+        "",
+        "<b>Dataset Challenges</b>",
+        "<ul>",
+        "  <li>Standardized inconsistent datetime formats (1940-2014)</li>",
+        "  <li>Cleaned 0.8% missing geographical data</li>",
+        "  <li>Normalized categorical values across 100+ shape descriptors</li>",
+        "</ul>",
+        "",
+        "<b>Acknowledgement</b>",
+        "<p>Data sourced from National UFO Reporting Center (NUFORC), processed by Sigmond Axel.</p>"
       ],
-      "image": "CovidTableauDashboard.png",
+      "image": "ufo.png",
       "tech": [
-        "Tableau",
-        "SQL",
-        "Python"
+        "Python",
+        "Pandas/Numpy",
+        "Plotly/Dash",
+        "Folium",
+        "WordCloud",
+        "Jupyter Notebook"
       ],
       "links": {
-        "tableau": "#",
-        "github": "#"
+        "live_demo": "#",
+        "github": "https://github.com/yourusername/ufo-analysis"
       },
       "key_metrics": [
-        "1M+ dataset processed",
-        "95% prediction accuracy"
+        "80,000+ reports analyzed (1910-2014)",
+        "12 key insights identified",
+        "8.02% data anomalies resolved",
+        "6 interactive visualizations integrated",
+        "75,000+ text descriptions processed"
       ]
     },
     {
