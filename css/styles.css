@@ -3,9 +3,9 @@ body {
     /* Dark background color */
     color: #FFFFFF;
     /* White text color for contrast */
-    font-family: 'Arial', sans-serif;
-    /* Default font */
+    font-family: 'Roboto', sans-serif; /* Default font */
     padding-top: 70px;
+    line-height: 1.6; /* Improved readability */
 }
 
 header {
