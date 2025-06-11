@@ -1802,6 +1802,9 @@ header {
     .project-image {
         height: 180px;
     }
+    .project-image img {
+        object-fit: contain; /* Ensure images are fully visible */
+    }
 
     .modal-project .modal-dialog {
         width: 98%;
@@ -1813,11 +1816,10 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 project per row */
         gap: 1.5rem;
-        padding: 0 0.5rem; /* Added padding control */
     }
 
     .project-card {
@@ -1826,6 +1828,13 @@ header {
 
     .project-image-main {
         height: 300px;
+    }
+    .project-image {
+        height: auto; /* Allow images to adjust height based on width */
+    }
+
+    .project-image img {
+        object-fit: contain; /* Ensure images are fully visible */
     }
 
     .modal-project-header .project-title {
@@ -1855,6 +1864,7 @@ header {
 
 @media (max-width: 576px) {
     #projects .container {
+        grid-template-columns: 1fr;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
