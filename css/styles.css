@@ -1866,6 +1866,9 @@ header {
     .tech-stack-container h4 {
         font-size: 1.2rem;
     }
+    .project-filters {
+        flex-wrap: wrap;
+    }
 }
 
 /* Utility Classes */
@@ -1873,6 +1876,9 @@ header {
     border-color: #FF6347;
     color: #FF6347;
     transition: all 0.3s ease;
+}
+.no-overflow {
+    overflow-x: hidden;
 }
 
 .btn-outline-danger:hover {
