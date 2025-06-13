@@ -41,7 +41,7 @@
         "Jupyter Notebook"
       ],
       "links": {
-        "github": "#"
+        "github": "https://github.com/rdsandip7/Air_Quality"
       },
       "key_metrics": [
         "Chi-squared test for industrial activity and natural reserves",
@@ -73,7 +73,7 @@
         "Scikit-learn"
       ],
       "links": {
-        "github": "#",
+        "github": "https://github.com/rdsandip7/Supply_chain_analysis",
         "demo": "#"
       },
       "key_metrics": [
@@ -108,8 +108,8 @@
         "Python"
       ],
       "links": {
-        "tableau": "#",
-        "github": "#"
+        "tableau": "",
+        "github": "https://github.com/rdsandip7/CovidTableau"
       },
       "key_metrics": [
         "1M+ dataset processed",
@@ -150,7 +150,7 @@
         "SQL"
       ],
       "links": {
-        "github": "#"
+        "github": "https://github.com/rdsandip7/pizzaSalesAnalysis"
       },
       "key_metrics": [
         "Total revenue generated",
@@ -206,7 +206,7 @@
         "AdventureWorks2017 Database"
       ],
       "links": {
-        "github": "#"
+        "github": "https://github.com/rdsandip7/SalesReportSSRS"
       },
       "key_metrics": [
         "Dynamic Sales Report with user-friendly interface",
@@ -244,7 +244,7 @@
         "SQL"
       ],
       "links": {
-        "github": "#"
+        "github": "https://github.com/rdsandip7/covidSqlQueries"
       },
       "key_metrics": [
         "Death percentages by region",
