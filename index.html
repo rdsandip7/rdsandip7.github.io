@@ -146,14 +146,17 @@
                     <div class="profile-container">
                         <div class="profile-wrapper">
                             <div class="profile-photo">
-                                <img src="images/Sandip.png" class="img-fluid" alt="Sandip Dhakal">
+                                <picture>
+                                    <source srcset="images/Sandip.webp" type="image/webp">
+                                    <img src="images/Sandip.png" class="img-fluid" alt="Sandip Dhakal" width="684" height="800">
+                                </picture>
                                 <div class="profile-overlay"></div>
                             </div>
                             <div class="profile-frame"></div>
                         </div>
 
                         <div class="social-links mt-4">
-                            <a href="www.linkedin.com/in/rdsandip7" target="_blank" class="social-link"
+                            <a href="https://www.linkedin.com/in/rdsandip7" target="_blank" class="social-link"
                                 aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
@@ -756,9 +759,8 @@
                 <h1 class="name-title">Sandip Dhakal</h1>
                 <h3 class="position-subtitle">Data Analyst and Data Support</h3>
                 <div class="contact-info">
-                    <a href="tel:+61452056344" class="contact-link">+61452056344</a> •
                     <a href="mailto:rdsandip7@gmail.com" class="contact-link">rdsandip7@gmail.com</a> •
-                    <a href="www.linkedin.com/in/rdsandip7" class="contact-link">LinkedIn</a> •
+                    <a href="https://www.linkedin.com/in/rdsandip7" class="contact-link">LinkedIn</a> •
                     <a href="https://sandipdhakal.com.np" class="contact-link">Portfolio</a>
                 </div>
             </div>
@@ -768,12 +770,10 @@
                 <!-- Career Objective -->
                 <div class="resume-card mb-4">
                     <h3 class="resume-subtitle"><i class="fas fa-bullseye me-2"></i>Career Objective</h3>
-                    <p class="resume-text">Detail-oriented and analytical Data Analyst with a Master’s degree in
-                        Business Information Systems and a Bachelor’s degree in Information Technology. Proven
-                        experience in collecting, processing, and analyzing data to drive strategic business decisions.
-                        Proficient in SQL, Python, and data visualization tools such as Power BI and Tableau. Seeking to
-                        leverage my strong analytical skills and technical expertise to contribute to data-driven
-                        initiatives and support the company’s objectives at eSafety Supplies.</p>
+                    <p class="resume-text">Detail-oriented Data Analyst with a Master’s degree in Business Information Systems and a
+                        Bachelor’s degree in Information Technology. Experienced in collecting, processing, and
+                        analysing data to drive business decisions, using SQL, Python, Power BI and Tableau to turn
+                        raw data into clear, actionable insight.</p>
                 </div>
 
                 <!-- Skills Grid -->
@@ -1078,16 +1078,6 @@
                             </div>
                         </div>
 
-                        <div class="contact-method mb-4">
-                            <div class="method-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="method-details">
-                                <h4>Phone</h4>
-                                <a href="tel:+61452056344">(+61) 452056344</a>
-                            </div>
-                        </div>
-
                         <div class="contact-method">
                             <div class="method-icon">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1099,7 +1089,7 @@
                         </div>
 
                         <div class="social-links mt-5">
-                            <a href="www.linkedin.com/in/rdsandip7" class="social-icon" aria-label="LinkedIn"><i
+                            <a href="https://www.linkedin.com/in/rdsandip7" class="social-icon" aria-label="LinkedIn"><i
                                     class="fab fa-linkedin-in"></i></a>
                             <a href="https://github.com/rdsandip7" class="social-icon" aria-label="GitHub"><i
                                     class="fab fa-github"></i></a>
@@ -1156,6 +1146,9 @@
                                         <span class="btn-text">Send Message</span>
                                         <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                                     </button>
+                                </div>
+                                <div class="col-12">
+                                    <p id="contactFormStatus" class="text-danger mb-0" role="alert" hidden></p>
                                 </div>
                             </div>
                         </form>
@@ -1223,8 +1216,6 @@
                             <li><i class="fas fa-map-marker-alt me-2"></i>Strathfield, NSW 2135</li>
                             <li><i class="fas fa-envelope me-2"></i><a href="mailto:rdsandip7@gmail.com"
                                     class="footer-link">rdsandip7@gmail.com</a></li>
-                            <li><i class="fas fa-phone-alt me-2"></i><a href="tel:+61452056344" class="footer-link">+61
-                                    452 056 344</a></li>
                         </ul>
                         <div class="download-resume mt-3">
                             <a href="docs/sandipresume.pdf" class="btn btn-download btn-outline-light btn-sm" download>
@@ -1256,14 +1247,6 @@
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
-
-                        <div class="newsletter mt-4">
-                            <h5 class="newsletter-title">Stay Updated</h5>
-                            <form class="newsletter-form">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                                <button class="btn btn-primary btn-sm mt-2" type="submit">Subscribe</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1272,7 +1255,7 @@
             <div class="footer-bottom mt-4 pt-4 border-top">
                 <div class="row">
                     <div class="col-md-6 text-md-start text-center mb-2">
-                        <p class="mb-0">&copy; 2025 Sandip Dhakal. All rights reserved.</p>
+                        <p class="mb-0">&copy; <span id="copyrightYear">2026</span> Sandip Dhakal. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end text-center">
                         <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Sandip</p>

@@ -160,40 +160,61 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 //contact 
 
+// Contact form delivery.
+// Paste your Formspree form URL here (e.g. 'https://formspree.io/f/abcdwxyz').
+// While it is empty, the form opens the visitor's email app with the message
+// pre-filled, so messages are never silently lost.
+const CONTACT_FORM_ENDPOINT = '';
+const CONTACT_EMAIL = 'rdsandip7@gmail.com';
+
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const statusEl = document.getElementById('contactFormStatus');
 
-    // Form validation
-    contactForm.addEventListener('submit', function (event) {
+    function setStatus(text) {
+        statusEl.textContent = text;
+        statusEl.hidden = !text;
+    }
+
+    contactForm.addEventListener('submit', async function (event) {
         event.preventDefault();
         event.stopPropagation();
+        contactForm.classList.add('was-validated');
+        setStatus('');
+        if (!contactForm.checkValidity()) return;
 
-        // Check form validity
-        if (contactForm.checkValidity()) {
-            // Get form values
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            subject: document.getElementById('subject').value.trim(),
+            message: document.getElementById('message').value.trim()
+        };
 
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', formData);
-
-            // Simulate form submission
-            setTimeout(() => {
-                // Reset form
-                contactForm.reset();
-                contactForm.classList.remove('was-validated');
-
-                // Show success modal
-                successModal.show();
-            }, 1000);
+        if (!CONTACT_FORM_ENDPOINT) {
+            const subject = formData.subject || `Message from ${formData.name}`;
+            const body = `${formData.message}\n\n${formData.name}\n${formData.email}`;
+            window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            return;
         }
 
-        contactForm.classList.add('was-validated');
+        submitBtn.disabled = true;
+        try {
+            const response = await fetch(CONTACT_FORM_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ ...formData, _replyto: formData.email })
+            });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            contactForm.reset();
+            contactForm.classList.remove('was-validated');
+            successModal.show();
+        } catch (err) {
+            setStatus(`Sorry, your message could not be sent. Please email me directly at ${CONTACT_EMAIL}.`);
+        } finally {
+            submitBtn.disabled = false;
+        }
     });
 
     // Close modal when clicking on backdrop
@@ -204,3 +225,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Keep the footer copyright year current
+document.addEventListener('DOMContentLoaded', function () {
+    const yearEl = document.getElementById('copyrightYear');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
