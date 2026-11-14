@@ -73,8 +73,7 @@
         "Scikit-learn"
       ],
       "links": {
-        "github": "https://github.com/rdsandip7/Supply_chain_analysis",
-        "demo": "#"
+        "github": "https://github.com/rdsandip7/Supply_chain_analysis"
       },
       "key_metrics": [
         "Top-performing SKUs identified",
@@ -108,7 +107,6 @@
         "Python"
       ],
       "links": {
-        "tableau": "",
         "github": "https://github.com/rdsandip7/CovidTableau"
       },
       "key_metrics": [
@@ -310,10 +308,7 @@
         "WordCloud",
         "Jupyter Notebook"
       ],
-      "links": {
-        "live_demo": "#",
-        "github": "https://github.com/yourusername/ufo-analysis"
-      },
+      "links": {},
       "key_metrics": [
         "80,000+ reports analyzed (1910-2014)",
         "12 key insights identified",

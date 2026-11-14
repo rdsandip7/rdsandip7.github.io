@@ -15,7 +15,6 @@ async function loadProjects() {
         if (!response.ok) throw new Error('Network response was not ok');
 
         const data = await response.json();
-        console.log('Raw JSON data:', data);
 
         // Validate projects array
         if (!data.projects || !Array.isArray(data.projects)) {
@@ -28,7 +27,6 @@ async function loadProjects() {
             const dateB = new Date(b.date || new Date());
             return dateB - dateA;
         });
-        console.log('Sorted projects:', allProjects);
 
         renderProjects();
         renderFilters();
@@ -126,27 +124,20 @@ function renderPagination(filteredProjects) {
 
 // model handeler to expand project card
 function initModalHandlers() {
-    console.log('Initializing modal handlers...');
     
     const modal = new bootstrap.Modal(document.getElementById('projectModal'));
     const grid = document.getElementById('projects-grid');
-    console.log('Grid element:', grid);
 
     grid.addEventListener('click', (e) => {
-        console.log('Grid click detected. Target:', e.target);
         
         const card = e.target.closest('.project-card');
         const button = e.target.closest('.view-more-btn');
-        console.log('Card element:', card);
-        console.log('Button element:', button);
 
         if (card || button) {
             const projectElement = card || button.closest('.project-card');
             const projectId = projectElement?.dataset?.id;
-            console.log('Project ID found:', projectId);
             
             if (projectId) {
-                console.log('Attempting to show project ID:', projectId);
                 showProjectDetails(projectId);
                 modal.show();
             }
