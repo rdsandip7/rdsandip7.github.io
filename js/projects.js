@@ -55,7 +55,7 @@ function renderProjects() {
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-desc">${project.short_desc}</p>
                 <div class="tech-tags">
-                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    ${project.tech.slice(0, 3).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
                 <button class="view-more-btn">View Details</button>
             </div>

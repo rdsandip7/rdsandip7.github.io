@@ -1,17 +1,19 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
+
 document.addEventListener('DOMContentLoaded', function () {
     // Example: Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+                behavior: scrollBehavior
             });
         });
     });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navbar = document.getElementById('mainNavbar');
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -19,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add scroll event listener
     window.addEventListener('scroll', function () {
-        // Shrink navbar on scroll
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
 
         // Highlight active section
         let current = '';
@@ -81,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     controls.forEach(control => {
         control.addEventListener('click', () => {
             const scrollAmount = control.classList.contains('next') ? 300 : -300;
-            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            carousel.scrollBy({ left: scrollAmount, behavior: scrollBehavior });
         });
     });
 
@@ -136,8 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Auto-slide functionality
     function startAutoSlide() {
         stopAutoSlide(); // Ensure any existing interval is cleared
+        if (prefersReducedMotion) return;
         autoSlideInterval = setInterval(() => {
-            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+            carousel.scrollBy({ left: 300, behavior: scrollBehavior });
         }, autoSlideSpeed);
     }
 

@@ -869,7 +869,6 @@ header {
 .tool-logo img {
     max-width: 100%;
     max-height: 60px;
-    filter: grayscale(100%) brightness(150%);
     transition: filter 0.3s ease;
 }
 
@@ -886,9 +885,9 @@ header {
 .tool-category {
     display: block;
     text-align: center;
-    font-size: 0.8rem;
-    color: #FF6347;
-    background: rgba(255, 99, 71, 0.1);
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.08);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     width: fit-content;
@@ -906,8 +905,9 @@ header {
     background: transparent;
     border: 1px solid rgba(255, 99, 71, 0.3);
     color: rgba(255, 255, 255, 0.7);
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     border-radius: 25px;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
@@ -1038,12 +1038,12 @@ header {
 }
 
 .skill-tag {
-    background: rgba(255, 99, 71, 0.1);
-    color: #FF6347;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.9);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    border: 1px solid rgba(255, 99, 71, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .soft-skills-grid {
@@ -1466,7 +1466,6 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(50%) brightness(80%);
     transition: filter 0.3s ease;
 }
 
@@ -1506,8 +1505,8 @@ header {
 }
 
 .tech-tag {
-    background: rgba(255, 99, 71, 0.1);
-    color: #FF6347;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.9);
     padding: 0.5rem 1rem;
     border-radius: 30px;
     font-size: 0.9rem;
@@ -1536,8 +1535,7 @@ header {
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    opacity: 0;
+    transform: translateX(-50%);
     z-index: 2;
     backdrop-filter: blur(4px);
     width: max-content;
@@ -1589,8 +1587,9 @@ header {
     background: transparent;
     border: 1px solid rgba(255, 99, 71, 0.3);
     color: rgba(255, 255, 255, 0.7);
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     border-radius: 25px;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
@@ -1944,4 +1943,13 @@ header {
     background: linear-gradient(45deg, #FF6347, #ff9a8b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+/* Respect the visitor's "reduce motion" system setting */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
